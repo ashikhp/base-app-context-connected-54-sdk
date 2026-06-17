@@ -107,9 +107,53 @@ export function DrawerContent(props) {
             Attendance
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={0.7}
+          style={[styles.item, current === 'Applications' && { backgroundColor: '#FFF3E0' }]}
+          onPress={() => {
+            props.navigation.navigate('HomeDrawer', { screen: 'Applications' })
+
+          }}
+        >
+          <View style={[styles.iconChip, { backgroundColor: '#eaeaea' }]}>
+            <FontAwesome5 name="file-alt" size={15} color="#5f65fc" />
+          </View>
+          <Text style={[styles.label, current === 'Applications' && { color: '#E65100', fontWeight: '700' }]}>
+            Applications
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={0.7}
+          style={[styles.item, current === 'Doccuments' && { backgroundColor: '#FFF3E0' }]}
+          onPress={() => {
+            props.navigation.navigate('HomeDrawer', { screen: 'Doccuments' })
+
+          }}
+        >
+          <View style={[styles.iconChip, { backgroundColor: '#fff3f5' }]}>
+            <FontAwesome5 name="file" size={15} color="#bc6e7e" />
+          </View>
+          <Text style={[styles.label, current === 'Doccuments' && { color: '#E65100', fontWeight: '700' }]}>
+            Doccuments
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={0.7}
+          style={[styles.item, current === 'Announcements' && { backgroundColor: '#FFF3E0' }]}
+          onPress={() => {
+            props.navigation.navigate('HomeDrawer', { screen: 'Announcements' })
+
+          }}
+        >
+          <View style={[styles.iconChip, { backgroundColor: '#fff3f5' }]}>
+            <FontAwesome5 name="bullhorn" size={15} color="#bc6e7e" />
+          </View>
+          <Text style={[styles.label, current === 'Announcements' && { color: '#E65100', fontWeight: '700' }]}>
+            Announcements
+          </Text>
+        </TouchableOpacity>
       </DrawerContentScrollView>
 
-      {/* sign out */}
       <TouchableOpacity
         style={styles.signOut}
         onPress={() => {
